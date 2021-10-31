@@ -1,9 +1,17 @@
 %container {
-       width: 1200px;
-       padding-left: 15px;
+   width: 100%;
+   padding-left: 15px;
        padding-right: 15px;
        margin-right: auto;
        margin-left: auto;
+       @media  screen and(min-width: 480px) {
+          width: 480px;
+       }
+      //  width: 1200px;
+      //  padding-left: 15px;
+      //  padding-right: 15px;
+      //  margin-right: auto;
+      //  margin-left: auto;
    }
 
 %link {
