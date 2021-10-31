@@ -1,0 +1,88 @@
+.portfolio {
+    @extend %section;
+}
+.portfolio__container {
+    @extend %container;
+}
+.portfolio__title {
+    @extend %section-title;
+    @extend %visually-hidden;
+}
+
+.portfolio__list {
+    @extend %list;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio__item {
+    flex-basis: calc((100% - 60px) / 3);
+    
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+
+&:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+}
+}
+
+.portfolio__link {
+    @extend %link;
+    @include transition(box-shadow);
+    display: block;
+
+    &:hover, &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+
+.portfolio__thumb {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio__image {
+    @extend %img;
+}
+
+.portfolio__description {
+    @include transition(transform);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 63px 24px;
+
+    width: 100%;
+height: 100%;
+font-size: 18px;
+line-height: 1.56;
+color: $primary-white-color;
+background-color: $accent-color;
+transform: translateY(100%);
+
+.portfolio__link:hover &,
+.portfolio__link:focus & {
+    transform: translateY(0);
+}
+}
+
+
+.portfolio__content {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+}
+
+.portfolio__subtitle {
+    margin-bottom: 4px;
+    font-weight: 700;
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+
+}
+
+ .portfolio__text {
+     color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.87;
+ }

@@ -1,0 +1,88 @@
+.page-footer {
+    padding: 60px 0;
+    background-color: $primary-bgcolor;
+}
+.footer-container {
+    @extend %container;
+    display: flex;
+}
+
+.page-footer__address-box {
+    margin-right: 70px;
+}
+.address__list {
+    @extend %list;
+}
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+
+}
+.address__link {
+   @extend %link;
+   @include transition(color);
+    color: $primary-white-color;
+   
+font-style: normal;
+
+font-size: 14px;
+line-height: 1.71;
+
+&:hover, &:focus {
+    color: $accent-color;
+}
+}
+
+.address__link--transparent {
+    color: $tarnsparent-text-color;
+}
+
+.page-footer__join-text {
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 12px;
+    
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+
+text-transform: uppercase;
+
+color: $primary-white-color;
+}
+
+
+.page-footer__sign-container {
+    margin-left: auto;
+
+}
+.sign-form {
+    display: flex;
+    align-items: center;
+}
+.sign-form__input {
+    padding: 15px 16px;
+    margin-right: 12px;
+    min-width: 358px;
+min-height: 50px;
+border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 4px;
+background-color: transparent;
+color: rgba(255, 255, 255, 0.6);
+cursor: pointer;
+}
+.sign-form__input::placeholder {
+    font-size: 16px;
+line-height: 1.07;
+color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-form__button {
+    @extend %button;
+    @include centered(flex);
+    @include transition(background-color);
+}
+
+.sign-form__icon {
+   display: block;
+   margin-left: 8px;
+}

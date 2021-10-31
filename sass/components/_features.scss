@@ -1,0 +1,47 @@
+.features {
+    @extend %section;
+}
+.features__container {
+    @extend %container;
+}
+.features__title {
+    @extend %section-title;
+    @extend %visually-hidden;
+}
+.features__list {
+    @extend %list;
+    display: flex;
+}
+.features__item {
+   
+   flex-basis: calc((100% - 90px) / 4);
+   
+   &:not(:last-child) {
+    margin-right: 30px;
+}
+    
+}
+
+.features__thumb {
+    @include centered(inline-flex);
+    margin-bottom: 30px;
+   
+    width: 270px;
+    height: 120px;
+    background-color: $secondary-bgcolor;
+}
+
+
+.features__subtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+}
+.features__text {
+    color: $secondary-text-color;
+        
+font-size: 14px;
+line-height: 1.71;
+}

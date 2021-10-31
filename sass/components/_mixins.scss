@@ -1,0 +1,10 @@
+@mixin centered($value) {
+display: $value;
+justify-content: center;
+align-items: center;
+}
+
+@mixin transition($value) {
+    transition: $value 250ms $timing-function;
+    
+}

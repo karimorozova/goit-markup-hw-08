@@ -1,0 +1,125 @@
+.modal__title {
+    display: block;
+    margin-bottom: 12px;
+    text-align: center;
+   font-style: 700;
+   font-size: 20px;
+   line-height: 1.15;
+}
+
+.modal__form-field {
+    margin-bottom: 10px;
+}
+.modal__label {
+   font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: $secondary-text-color;
+cursor: pointer;
+}
+.modal__input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+.modal__input {
+    @include transition(border-color);
+    width: 100%;
+    min-height: 40px;
+    padding: 11px;
+    padding-left: 34px;
+    font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: $secondary-text-color;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+cursor: pointer;
+
+&:focus {
+    border-color: $accent-color;
+}
+
+}
+
+.modal__form-icon {
+    @include transition(fill);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+.modal__input:focus ~ & {
+    fill: $accent-color;
+}
+
+}
+
+/* Textarea comment */
+
+.modal__comment-field {
+    margin-bottom: 20px;
+
+}
+.modal__input--large {
+    @extend %textarea;
+    margin-top: 4px;
+    padding: 12px 16px;
+    min-height: 120px;
+}
+.modal__input--large::placeholder {
+    font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.01em;
+color:rgba(117, 117, 117, 0.5);
+}
+
+/* Checkbox */
+
+.modal__checkbox-container {
+   text-align: center;
+    margin-bottom: 30px;
+}
+.modal__checkbox-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height: 1.46;
+    color: $secondary-text-color;
+
+}
+.modal__checkbox-input {
+   @extend %visually-hidden;
+}
+.modal__policy {
+    color: $accent-color;
+}
+ .modal__checkbox-icon {
+     @include transition(opacity);
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+.modal__checkbox-input:checked ~ & {
+    opacity: 0;
+} 
+}
+
+ .modal__checkbox-icon--checked {
+     opacity: 0; 
+
+ .modal__checkbox-input:checked ~ & {
+    opacity: 1;
+}
+    }
+
+/* Form button */
+.modal__form-btn {
+    @extend %button;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}

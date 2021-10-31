@@ -1,0 +1,45 @@
+.clients {
+    @extend %section;
+}
+.clients__container {
+    @extend %container;
+}
+.clients__section-title {
+    @extend %section-title;
+}
+
+.clients__list {
+    @extend %list;
+    display: flex;
+    flex-basis: calc((100% - 150px) / 6);
+}
+.clients__item:not(:nth-child(6n)) {
+    margin-right: 30px;
+   
+}
+
+ .clients__link {
+     @extend %link;
+     @include centered(inline-flex);
+     @include transition(border);
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid $primary-icon-color;
+
+    &:hover, &:focus {
+        border: 1px solid $accent-color;
+    }
+}
+.clients__icon {
+    @include transition(fill);
+    fill: $primary-icon-color;
+
+    .clients__link:hover &,
+.clients__link:focus & {
+    fill: $accent-color;
+}
+}
+
+
+
