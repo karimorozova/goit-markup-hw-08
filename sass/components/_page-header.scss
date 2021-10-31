@@ -4,9 +4,39 @@
 
 .page-header__container {
     @extend %container;
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
+}
+.mobile-btn {
+    min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  @media screen and (min-width: 768px) {
+      display: none;
+  }
+  
+}
+.icon-menu {
+    .mobile-btn.is-open & {
+        display: none;
+    }
+}
+.icon-menu-close {
+    display: none;
+    .mobile-btn.is-open & {
+        display: block;
+    }
 }
 
 .site-nav__list {

@@ -102,12 +102,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .logo {
-  display: block;
+  display: inline-block;
   color: #2196F3;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
 }
 
 .logo:hover, .logo:focus {
@@ -115,8 +115,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page-header__logo {
-  margin-right: 93px;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .logo__header-text {
@@ -204,6 +203,56 @@ h1, h2, h3, h4, h5, h6, p {
 
 .page-header {
   border-bottom: 1px solid #ECECEC;
+}
+
+.page-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobile-btn {
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-btn {
+    display: none;
+  }
+}
+
+.mobile-btn.is-open .icon-menu {
+  display: none;
+}
+
+.icon-menu-close {
+  display: none;
+}
+
+.mobile-btn.is-open .icon-menu-close {
+  display: block;
 }
 
 .site-nav__list {

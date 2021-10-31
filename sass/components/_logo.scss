@@ -1,11 +1,13 @@
 .logo {
     @extend %link;
-    display: block;
+    display: inline-block;
     color: $accent-color;
     font-family: $logo-font;
 font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
+font-size: 24px;
+line-height: 1.16;
+// font-size: 26px;
+// line-height: 1.19;
 
    &:hover, &:focus {
     color: $accent-color;
@@ -13,8 +15,9 @@ line-height: 1.19;
 }
 }
 .page-header__logo {
-    margin-right: 93px;
-    padding: 24px 0;
+    padding: 16px 0;
+    // margin-right: 93px;
+    // padding: 24px 0;
 }
 .logo__header-text {
     @include transition(color);
