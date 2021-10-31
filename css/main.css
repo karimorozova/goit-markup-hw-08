@@ -10,11 +10,29 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page-header__container, .features__container, .about__container, .team__container, .clients__container, .footer-container, .portfolio__container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .page-header__container, .features__container, .about__container, .team__container, .clients__container, .footer-container, .portfolio__container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header__container, .features__container, .about__container, .team__container, .clients__container, .footer-container, .portfolio__container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__container, .features__container, .about__container, .team__container, .clients__container, .footer-container, .portfolio__container {
+    width: 1200px;
+  }
 }
 
 .logo, .social-list__link, .site-nav__link--current, .site-nav__link, .contacts-list__link, .clients__link, .address__link, .portfolio__link {
@@ -186,15 +204,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .page-header {
   border-bottom: 1px solid #ECECEC;
-}
-
-.page-header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .site-nav__list {
