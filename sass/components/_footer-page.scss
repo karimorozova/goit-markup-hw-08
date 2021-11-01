@@ -1,20 +1,39 @@
 .page-footer {
     padding: 60px 0;
     background-color: $primary-bgcolor;
+    
 }
 .footer-container {
     @extend %container;
-    display: flex;
+    // display: flex;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        text-align: left;
+    }
 }
 
 .page-footer__address-box {
-    margin-right: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+       margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 70px;
+        // margin-bottom: 0;
+    }
+    // margin-right: 70px;
 }
 .address__list {
     @extend %list;
 }
 .address__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+    }
+    
+    // margin-bottom: 9px;
 
 }
 .address__link {
@@ -39,7 +58,7 @@ line-height: 1.71;
 .page-footer__join-text {
     display: block;
     margin-bottom: 20px;
-    padding-top: 12px;
+    // padding-top: 12px;
     
 font-weight: 700;
 font-size: 14px;
@@ -50,25 +69,66 @@ text-transform: uppercase;
 color: $primary-white-color;
 }
 
+.page-footer__social-list {
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
 
+.tablet-container {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
 .page-footer__sign-container {
-    margin-left: auto;
+    @media screen and (min-width: 1200px) {
+        margin-left: auto; 
+    }
+    // margin-left: auto;
 
 }
 .sign-form {
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+     align-items: center;
+    }
+    // display: flex;
+    // align-items: center;
+}
+.sign-form__label {
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
+    }
+
 }
 .sign-form__input {
     padding: 15px 16px;
-    margin-right: 12px;
-    min-width: 358px;
+    // margin-right: 12px;
+    width: 100%;
+    
 min-height: 50px;
+margin-bottom: 20px;
 border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
 background-color: transparent;
 color: rgba(255, 255, 255, 0.6);
 cursor: pointer;
+@media screen and (min-width: 480px) {
+    min-width: 450px;
+}
+@media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    margin-bottom: 0px;
+    min-width: 358px;
+}
 }
 .sign-form__input::placeholder {
     font-size: 16px;
@@ -80,6 +140,8 @@ color: rgba(255, 255, 255, 0.6);
     @extend %button;
     @include centered(flex);
     @include transition(background-color);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .sign-form__icon {

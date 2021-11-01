@@ -703,17 +703,42 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
 }
 
 .page-footer__address-box {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer__address-box {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__address-box {
+    margin-right: 70px;
+  }
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address__link {
@@ -736,7 +761,6 @@ h1, h2, h3, h4, h5, h6, p {
 .page-footer__join-text {
   display: block;
   margin-bottom: 20px;
-  padding-top: 12px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -744,29 +768,88 @@ h1, h2, h3, h4, h5, h6, p {
   color: #FFFFFF;
 }
 
-.page-footer__sign-container {
-  margin-left: auto;
+.page-footer__social-list {
+  margin-bottom: 60px;
 }
 
-.sign-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .page-footer__social-list {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tablet-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tablet-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__sign-container {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-form__label {
+    margin-right: 12px;
+  }
 }
 
 .sign-form__input {
   padding: 15px 16px;
-  margin-right: 12px;
-  min-width: 358px;
+  width: 100%;
   min-height: 50px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
+}
+
+@media screen and (min-width: 480px) {
+  .sign-form__input {
+    min-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign-form__input {
+    margin-right: 12px;
+    margin-bottom: 0px;
+    min-width: 358px;
+  }
 }
 
 .sign-form__input::-webkit-input-placeholder {
@@ -805,6 +888,8 @@ h1, h2, h3, h4, h5, h6, p {
           align-items: center;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .sign-form__icon {
