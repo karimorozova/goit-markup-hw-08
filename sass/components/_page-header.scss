@@ -1,5 +1,8 @@
 .page-header {
-    border-bottom: 1px solid #ECECEC;
+    @media screen and (min-width: 1200px) {
+        border-bottom: 1px solid #ECECEC;  
+    }
+    
 }
 
 .page-header__container {
@@ -7,6 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 1199px) {
+        border-bottom: 1px solid #ECECEC;  
+    }
     
 }
 .mobile-btn {
