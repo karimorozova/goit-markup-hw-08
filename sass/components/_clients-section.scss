@@ -11,11 +11,22 @@
 .clients__list {
     @extend %list;
     display: flex;
-    flex-basis: calc((100% - 150px) / 6);
+    flex-wrap: wrap;
+    margin: -15px;
+    
 }
-.clients__item:not(:nth-child(6n)) {
-    margin-right: 30px;
-   
+.clients__item {
+    flex-basis: calc((100% - 60px) / 2);
+    margin: 15px;
+    
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 90px) / 3);
+        
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 180px) / 6);
+        
+    }
 }
 
  .clients__link {
@@ -23,12 +34,21 @@
      @include centered(inline-flex);
      @include transition(border);
 
-    width: 170px;
+    width: 50%;
     height: 92px;
     border: 1px solid $primary-icon-color;
 
     &:hover, &:focus {
         border: 1px solid $accent-color;
+    }
+    @media screen and (min-width: 480px) {
+        width: 210px;
+     }
+    @media screen and (min-width: 768px) {
+       width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 .clients__icon {

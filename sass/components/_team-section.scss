@@ -19,7 +19,6 @@
 }
 .team__item {
     background-color: $primary-white-color;
-    // width: calc((100% - 90px) / 4);
     text-align: center;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 0px 0px 4px 4px;
@@ -52,10 +51,6 @@ margin-bottom: 0;
 
 }
 
-
-// &:not(:nth-child(4n)) {
-//     margin-right: 30px;
-// }
 }
 
 .team__image {
