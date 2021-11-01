@@ -1,8 +1,12 @@
 .social-list {
     @extend %list;
-    display: flex;
-    align-items: center;
-    padding: 0 32px 30px;
+    @include centered(flex);
+    // display: flex;
+    // align-items: center;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 30px;
+    }
 }
 .social-list__item:not(:last-child) {
     margin-right: 10px;
