@@ -1,10 +1,9 @@
 .page-hero {
     padding: 118px 0;
-    // padding: 200px 0;
+    
         background-color: $hero-bgcolor;
         text-align: center;
-        max-width: 100%;
-        // max-width: 1600px;
+        max-width: 480px;
         margin-right: auto;
         margin-left: auto;
         
@@ -12,7 +11,48 @@
         url("../images/hero-mobile.jpg");
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 480px;
+        background-size: cover;
+        @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/hero-mobile@2x.jpg");
+  
+}
+@media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/hero-tablet.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/hero-tablet@2x.jpg");
+  
+}
+}
+@media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/hero.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/hero@2x.jpg");
+  
+}
+}
        
 }
  
@@ -22,18 +62,22 @@
       max-width: 360px;
     margin-right: auto;
     margin-left: auto;
-    // max-width: 696px;
+    
    
    color: $primary-white-color;
     
 font-weight: 900;
 font-size: 26px;
 line-height: 1.61;
-// font-size: 44px;
-// line-height: 1.36;
 text-align: center;
 letter-spacing: 0.06em;
 text-transform: uppercase;
+@media  screen and (min-width: 1200px) {
+     max-width: 696px;
+    font-size: 44px;
+line-height: 1.36;
+    
+}
 }
 .page-hero__button {
     @extend %button;
