@@ -24,9 +24,17 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%) scale(1);
 
-width: 528px;
-height: 581px;
+max-width: 100%;
+min-height: 609px;
 padding: 40px;
+overflow-x: scroll;
+@media screen and (min-width: 480px) {
+    width: 450px;
+}
+@media screen and (min-width: 1200px) {
+    width: 528px;
+height: 581px;
+}
 
 
 background-color: $primary-white-color;

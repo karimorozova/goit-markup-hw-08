@@ -4,7 +4,11 @@
     text-align: center;
    font-style: 700;
    font-size: 20px;
-   line-height: 1.15;
+   line-height: 1.5;
+   @media screen and (min-width: 1200px) {
+    line-height: 1.15;  
+   }
+   
 }
 
 .modal__form-field {
@@ -30,7 +34,7 @@ cursor: pointer;
     padding: 11px;
     padding-left: 34px;
     font-size: 12px;
-line-height: 1.16;
+line-height: 1.17;
 letter-spacing: 0.01em;
 color: $secondary-text-color;
 border: 1px solid rgba(33, 33, 33, 0.2);
@@ -70,24 +74,31 @@ cursor: pointer;
 }
 .modal__input--large::placeholder {
     font-size: 14px;
-line-height: 1.14;
+line-height: 1.17;
 letter-spacing: 0.01em;
 color:rgba(117, 117, 117, 0.5);
+@media  screen and (min-width: 1200px) {
+    font-size: 12px;
+line-height: 1.16;
+}
 }
 
 /* Checkbox */
 
 .modal__checkbox-container {
-   text-align: center;
     margin-bottom: 30px;
 }
 .modal__checkbox-label {
     cursor: pointer;
     position: relative;
     padding-left: 25px;
-    font-size: 14px;
-    line-height: 1.46;
+    font-size: 11px;
+    line-height: 1.17;
     color: $secondary-text-color;
+    @media  screen and (min-width: 1200px) {
+        font-size: 14px;
+    line-height: 1.7;
+    }
 
 }
 .modal__checkbox-input {
@@ -99,7 +110,7 @@ color:rgba(117, 117, 117, 0.5);
  .modal__checkbox-icon {
      @include transition(opacity);
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 0;
 
 .modal__checkbox-input:checked ~ & {
