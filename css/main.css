@@ -828,7 +828,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .sign-form__input {
   padding: 15px 16px;
-  width: 100%;
+  max-width: 100%;
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);

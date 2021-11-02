@@ -5,7 +5,6 @@
 }
 .footer-container {
     @extend %container;
-    // display: flex;
     text-align: center;
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -20,9 +19,9 @@
     }
     @media screen and (min-width: 1200px) {
         margin-right: 70px;
-        // margin-bottom: 0;
+       
     }
-    // margin-right: 70px;
+   
 }
 .address__list {
     @extend %list;
@@ -32,8 +31,6 @@
     @media screen and (min-width: 1200px) {
         margin-bottom: 9px;
     }
-    
-    // margin-bottom: 9px;
 
 }
 .address__link {
@@ -58,7 +55,6 @@ line-height: 1.71;
 .page-footer__join-text {
     display: block;
     margin-bottom: 20px;
-    // padding-top: 12px;
     
 font-weight: 700;
 font-size: 14px;
@@ -92,7 +88,6 @@ color: $primary-white-color;
     @media screen and (min-width: 1200px) {
         margin-left: auto; 
     }
-    // margin-left: auto;
 
 }
 .sign-form {
@@ -100,8 +95,6 @@ color: $primary-white-color;
         display: flex;
      align-items: center;
     }
-    // display: flex;
-    // align-items: center;
 }
 .sign-form__label {
     @media screen and (min-width: 1200px) {
@@ -111,8 +104,7 @@ color: $primary-white-color;
 }
 .sign-form__input {
     padding: 15px 16px;
-    // margin-right: 12px;
-    width: 100%;
+    max-width: 100%;
     
 min-height: 50px;
 margin-bottom: 20px;

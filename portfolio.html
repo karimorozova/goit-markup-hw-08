@@ -16,13 +16,20 @@
     <header class="page-header">
         <div class="page-header__container">
             <a href="./index.html" lang="en" class="logo page-header__logo">Web<span class="logo__header-text">Studio</span></a>
-            <nav class="site-nav">
+            <button class="mobile-btn"  aria-expanded="false"
+            aria-controls="mobile-menu">
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#icon-mobile-close" class="icon-menu-close"></use>
+                    <use href="./images/icons.svg#icon-mobile-menu" class="icon-menu"></use>
+                </svg>
+            </button>
+            <!-- <nav class="site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item">
-                        <a href="./index.html" class="site-nav__link ">Студия</a>
+                        <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
                     </li>
                     <li class="site-nav__item">
-                        <a href="./portfolio.html" class="site-nav__link site-nav__link--current">Портфолио</a>
+                        <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
                     </li>
                     <li class="site-nav__item">
                         <a href="" class="site-nav__link">Контакты</a>
@@ -45,7 +52,7 @@
                         </svg>
                         +38 096 111 11 11</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
        
     </header>
@@ -63,7 +70,7 @@
                     <li class="portfolio__btn-item"> <button type="button" class="portfolio__btn">Дизайн</button></li>
                     <li class="portfolio__btn-item"> <button type="button" class="portfolio__btn">Маркетинг</button></li>
                 </ul>
-                <ul class="portfolio__list">
+                <!-- <ul class="portfolio__list">
                     <li class="portfolio__item">
                         <a href="" class="portfolio__link">
                             <div class="portfolio__thumb">
@@ -185,7 +192,7 @@
                             </div>
                            
                         </a></li>
-                </ul>
+                </ul> -->
             </div>
             
         </section>
@@ -194,6 +201,7 @@
     <!-- Footer -->
     <footer class="page-footer">
         <div class="footer-container">
+            <div class="tablet-container">
             <div class="page-footer__address-box">
                 <a href="./index.html" lang="en" class="logo page-footer__logo">Web<span class="logo__footer-text">Studio</span></a>
                 <address class="page-footer__address address">
@@ -245,6 +253,7 @@
                 </li>
             </ul>
             </div>
+        </div>
             <div class="page-footer__sign-container">
                 <b class="page-footer__join-text">Подпишитесь на рассылку</b>
                 <form class="page-footer__sign-form sign-form">
