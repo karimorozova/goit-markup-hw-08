@@ -124,6 +124,18 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 16px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    padding: 26px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    padding: 24px 0;
+  }
+}
+
 .logo__header-text {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -216,6 +228,10 @@ h1, h2, h3, h4, h5, h6, p {
   fill: #FFFFFF;
 }
 
+.page-header {
+  min-height: 80px;
+}
+
 @media screen and (min-width: 1200px) {
   .page-header {
     border-bottom: 1px solid #ECECEC;
@@ -278,10 +294,26 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
 }
 
+.site-nav {
+  margin-left: 88px;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-left: 93px;
+  }
+}
+
 .site-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav__list {
+    display: none;
+  }
 }
 
 .site-nav__item {
@@ -323,14 +355,32 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .contacts-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+  .contacts-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .contacts-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 
 .contacts-list__link {
@@ -342,12 +392,19 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 0;
   color: #757575;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-list__link {
+    font-size: 14px;
+    line-height: 1.14;
+    padding: 32px 0;
+  }
 }
 
 .contacts-list__link:hover, .contacts-list__link:focus {
@@ -356,7 +413,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .contacts-list__icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .page-hero {

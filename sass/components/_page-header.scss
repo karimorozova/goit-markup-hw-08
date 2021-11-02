@@ -1,4 +1,5 @@
 .page-header {
+    min-height: 80px;
     @media screen and (min-width: 1200px) {
         border-bottom: 1px solid #ECECEC;  
     }
@@ -13,6 +14,7 @@
     @media screen and (max-width: 1199px) {
         border-bottom: 1px solid #ECECEC;  
     }
+
     
 }
 .mobile-btn {
@@ -44,11 +46,20 @@
         display: block;
     }
 }
+.site-nav {
+    margin-left: 88px;
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px; 
+     }
+}
 
 .site-nav__list {
     @extend %list;
     display: flex;
     
+    @media screen and (max-width: 767px) {
+       display: none; 
+    } 
 }
 
 .site-nav__item {
@@ -95,27 +106,55 @@
  
 
  .contacts-list {
+    
      @extend %list;
-     display: flex;
      margin-left: auto;
+     @media screen and (max-width: 767px) {
+        display: none; 
+     }
+
+     @media screen and (min-width: 1200px) {
+        display: flex;
+     
+     }
+    
  }
  
- .contacts-list__item:not(:last-child) {
-    margin-right: 30px;
-}
+ .contacts-list__item {
+     
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+        
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+     
+     }
+ 
+ }
 
  .contacts-list__link {
      @extend %link;
      @include transition(color);
     display: inline-flex;
     align-items: center;
-    padding: 32px 0;
+    // padding: 32px 0;
 
     color: $secondary-text-color;
      font-weight: 500;
- font-size: 14px;
- line-height: 1.14;
  letter-spacing: 0.02em;
+ 
+    font-size: 12px;
+     line-height: 1.17;
+ 
+ @media screen and (min-width: 1200px) {
+    font-size: 14px;
+     line-height: 1.14;
+     padding: 32px 0;
+ }
 
  &:hover, &:focus {
     color: $accent-color;
@@ -124,5 +163,5 @@
  
  .contacts-list__icon {
     fill: currentColor;
-    margin-right: 10px;
+    margin-right: 8px;
 }

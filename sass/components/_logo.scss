@@ -16,6 +16,12 @@ line-height: 1.16;
 }
 .page-header__logo {
     padding: 16px 0;
+    @media screen and (min-width: 768px) {
+            padding: 26px 0; 
+         }
+         @media screen and (min-width: 1200px) {
+            padding: 24px 0; 
+         }
     // margin-right: 93px;
     // padding: 24px 0;
 }
