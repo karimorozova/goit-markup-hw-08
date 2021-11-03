@@ -200,6 +200,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .mobile-menu__link {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
@@ -208,6 +210,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .mobile-menu__link--current {
+  color: #2196F3;
+}
+
+.mobile-menu__link:hover, .mobile-menu__link:focus {
   color: #2196F3;
 }
 
@@ -229,11 +235,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .mobile-menu__mail {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+.mobile-menu__mail:hover, .mobile-menu__mail:focus {
+  color: #2196F3;
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -264,6 +276,11 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.mobile-menu__icon {
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__open-btn:hover .mobile-menu__icon,
@@ -462,6 +479,9 @@ h1, h2, h3, h4, h5, h6, p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

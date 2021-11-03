@@ -36,6 +36,7 @@
 }
 .mobile-menu__link {
     @extend %link;
+    @include transition(color);
     font-weight: 500;
 font-size: 40px;
 line-height: 1.17;
@@ -44,6 +45,10 @@ color: $primary-text-color;
 &--current {
     color: $accent-color;
 }
+&:hover, &:focus {
+    color: $accent-color
+}
+
 }
 .socials__social {
     @extend %link;
@@ -65,11 +70,16 @@ color: $accent-color;
 }
 .mobile-menu__mail {
     @extend %link;
+    @include transition(color); 
     font-weight: 500;
 font-size: 24px;
 line-height: 1.16;
 letter-spacing: 0.02em;
 color: $secondary-text-color;
+&:hover, &:focus {
+    color: $accent-color
+}
+
 }
 
 .mobile-menu__item:not(:last-child) {
@@ -94,9 +104,16 @@ color: $secondary-text-color;
   cursor: pointer;
   border: none;
   outline: none;
+
+}
+.mobile-menu__icon {
+    @include transition(fill);
+
   
-  &:hover .mobile-menu__icon, 
-  &:focus .mobile-menu__icon {
+    .mobile-menu__open-btn:hover &, 
+    .mobile-menu__open-btn:focus &,
+    .mobile-menu__close-btn:hover &, 
+    .mobile-menu__close-btn:focus &  {
 fill: $accent-color;
   }
 }
