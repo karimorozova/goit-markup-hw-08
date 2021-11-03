@@ -298,6 +298,12 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 88px;
 }
 
+@media screen and (max-width: 787px) {
+  .site-nav {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .site-nav {
     margin-left: 93px;
