@@ -93,11 +93,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .features__title, .about__section-title, .team__section-title, .clients__section-title, .portfolio__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .features__title, .about__section-title, .team__section-title, .clients__section-title, .portfolio__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .features__title, .modal__checkbox-input, .portfolio__title {
@@ -183,8 +191,18 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.mobile-menu__nav {
-  margin-bottom: 302px;
+.mobile-menu__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .mobile-menu__contacts {
@@ -370,12 +388,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page-header {
-  min-height: 80px;
+  border-bottom: 1px solid #ECECEC;
 }
 
 @media screen and (min-width: 1200px) {
   .page-header {
-    border-bottom: 1px solid #ECECEC;
+    min-height: 80px;
   }
 }
 
@@ -390,12 +408,6 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media screen and (max-width: 1199px) {
-  .page-header__container {
-    border-bottom: 1px solid #ECECEC;
-  }
 }
 
 .site-nav {
@@ -1125,7 +1137,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   max-width: 100%;
-  min-height: 609px;
+  max-height: 609px;
   padding: 40px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
